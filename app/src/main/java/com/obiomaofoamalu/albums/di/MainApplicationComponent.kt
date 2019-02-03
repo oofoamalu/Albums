@@ -1,5 +1,6 @@
 package com.obiomaofoamalu.albums.di
 
+import com.obiomaofoamalu.albums.AlbumListActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -8,4 +9,7 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(modules = [MainApplicationModule::class])
-interface MainApplicationComponent
+interface MainApplicationComponent {
+
+    fun inject(activity: AlbumListActivity)
+}
