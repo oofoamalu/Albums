@@ -3,7 +3,7 @@ package com.obiomaofoamalu.albums.data.di
 import android.arch.persistence.room.Room
 import android.content.Context
 import com.obiomaofoamalu.albums.data.AlbumRepository
-import com.obiomaofoamalu.albums.data.IAlbumRepository
+import com.obiomaofoamalu.albums.core.domain.IAlbumRepository
 import com.obiomaofoamalu.albums.data.local.ILocalAlbumRepository
 import com.obiomaofoamalu.albums.data.local.LocalAlbumRepository
 import com.obiomaofoamalu.albums.data.mapper.AlbumMapper

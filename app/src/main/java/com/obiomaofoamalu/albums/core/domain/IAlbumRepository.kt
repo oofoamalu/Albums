@@ -1,4 +1,4 @@
-package com.obiomaofoamalu.albums.data
+package com.obiomaofoamalu.albums.core.domain
 
 import com.obiomaofoamalu.albums.core.model.Album
 import io.reactivex.Single
