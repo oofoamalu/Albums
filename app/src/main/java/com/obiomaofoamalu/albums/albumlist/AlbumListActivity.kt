@@ -3,6 +3,7 @@ package com.obiomaofoamalu.albums.albumlist
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import android.widget.Toast
 import com.obiomaofoamalu.albums.R
 import com.obiomaofoamalu.albums.di.Injector
@@ -40,6 +41,8 @@ class AlbumListActivity : AppCompatActivity(), AlbumListPresenter.IAlbumListView
 
     override fun display(albums: List<AlbumViewModel>) {
         adapter.updateData(albums)
+        progressBar.visibility = View.GONE
+        recyclerView.visibility = View.VISIBLE
     }
 
     override fun displayErrorMessage(message: String) {
