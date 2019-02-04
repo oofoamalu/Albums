@@ -3,6 +3,7 @@ package com.obiomaofoamalu.albums.albumlist
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.widget.Toast
 import com.obiomaofoamalu.albums.R
 import com.obiomaofoamalu.albums.di.Injector
 import kotlinx.android.synthetic.main.activity_album_list.*
@@ -39,6 +40,10 @@ class AlbumListActivity : AppCompatActivity(), AlbumListPresenter.IAlbumListView
 
     override fun display(albums: List<AlbumViewModel>) {
         adapter.updateData(albums)
+    }
+
+    override fun displayErrorMessage(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
     private fun initView() {

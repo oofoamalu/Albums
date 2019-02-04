@@ -31,7 +31,7 @@ class AlbumListPresenter @Inject constructor(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                     { it -> displayInView(it) },
-                    { throwable -> Log.e(tag, throwable.message) }
+                    { handleError(it) }
                 )
         }
     }
@@ -64,6 +64,15 @@ class AlbumListPresenter @Inject constructor(
         }
     }
 
+    private fun handleError(throwable: Throwable) {
+        Log.e(tag, throwable.message)
+        if (throwable.message?.toLowerCase()!!.contains("unable to resolve host")) {
+            view?.displayErrorMessage(
+                "Cannot load data: Please check that you are connected to the internet and try again"
+            )
+        }
+    }
+
     /**
      * The [IAlbumListView] is the View component of the MVP pattern.
      *
@@ -77,5 +86,12 @@ class AlbumListPresenter @Inject constructor(
          * @param albums is the data to display
          */
         fun display(albums: List<AlbumViewModel>)
+
+        /**
+         * Displays a message on the screen
+         *
+         * @param message
+         */
+        fun displayErrorMessage(message: String)
     }
 }
