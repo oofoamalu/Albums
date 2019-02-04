@@ -1,4 +1,4 @@
-package com.obiomaofoamalu.albums.core
+package com.obiomaofoamalu.albums.core.model
 
 /**
  * The [Album] is a Business Object which is used by Business Logic entities.

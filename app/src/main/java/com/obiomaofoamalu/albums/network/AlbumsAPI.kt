@@ -1,6 +1,6 @@
 package com.obiomaofoamalu.albums.network
 
-import com.obiomaofoamalu.albums.core.Album
+import com.obiomaofoamalu.albums.core.model.Album
 import io.reactivex.Observable
 import retrofit2.http.GET
 
