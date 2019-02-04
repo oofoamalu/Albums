@@ -1,5 +1,6 @@
 package com.obiomaofoamalu.albums.data
 
+import com.obiomaofoamalu.albums.core.domain.IAlbumRepository
 import com.obiomaofoamalu.albums.core.model.Album
 import com.obiomaofoamalu.albums.data.local.ILocalAlbumRepository
 import com.obiomaofoamalu.albums.data.remote.IRemoteAlbumRepository
